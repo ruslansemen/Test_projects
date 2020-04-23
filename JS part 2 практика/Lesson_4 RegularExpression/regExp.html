@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regExp</title>
+    <script>
+      //======
+      //   const regexp = new RegExp("abc", "g");
+      //   const regexp = /gr(a|e)y/g;
+      //   const str = "grey";
+      //   console.log(regexp.test(str)); // вернёт true
+      //-------------------------------
+      //   const regexp = /Geek/g;
+      //   const str = "Geek from Geekbrains";
+      //   console.log(str.match(regexp)); // вернёт массив ['Geek', 'Geek']
+      //-------------------------------
+      //   const str = "This is string";
+      //   const regexp = /is/g;
+      //   console.log(str.replace(regexp, "+")); // вернёт "Th+ + string"
+
+      //----------------------------------------
+
+      /* const regexp = /\b.[^ ]/g;
+      const str = " 23graoaaambhbaaa23 cc230y ";
+      console.log(str.match(regexp)); */
+      const regexp = /''/g;
+      const str =
+        "23graoaaambhbaaa23 'gfghfhg' ghgj  'hjghgjhgj' aren't cc230y";
+      let str1 = str.replace(regexp, '""');
+      console.log(str1);
+    </script>
+  </head>
+
+  <body></body>
+</html>

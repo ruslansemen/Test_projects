@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>createTextNode example</title>
+
+
+
+</head>
+
+<body>
+    <button>YES!</button>
+    <button>NO!</button>
+    <button>WE CAN!</button>
+    <p id="rub"></p>
+    <p>&#9800</p>
+    <p style="display: inline-block; height: auto; width: auto; font-size: 102px; line-height: 20px;">&#9812 Lorem ipsum
+        dolor sit amet
+        consectetur adipisicing elit. Ipsum itaque ratione perspiciatis quasi voluptates, ipsam officia eius! Nulla, a
+        porro. Quas, magni eos? Fuga consectetur harum, facere soluta sapiente esse.</p>
+
+    <hr />
+
+    <div id="p1">
+        <p> First line of paragraph.</p>
+    </div>
+
+    <script>
+        var rub = document.getElementById("rub");
+        rub.innerHTML = "\u20bd";
+        var newtext = document.createTextNode("text lorem ");
+        var newtext2 = document.createTextNode(" text2 lorem2 ");
+        var p1 = document.getElementById("p1");
+
+        p1.appendChild(newtext);
+        p1.appendChild(newtext2);
+    </script>
+</body>
+
+</html>

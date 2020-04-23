@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FIDO</title>
+    <script>
+        var dog = {
+            name: "Fido",
+            weight: 20.2,
+            age: 4,
+            breed: "mixed",
+            activity: "fetch balls"
+        };
+
+        dog.dogYears = 30;
+        delete dog.dogYears;
+        delete dog.breed;
+
+        console.log(dog);
+
+        var bark;
+        if (dog.weight > 20) {
+            bark = "WOOF WOOF";
+        } else {
+            bark = "woof woof";
+        }
+
+        var speak = dog.name + " says " + bark + " when he wants to " + dog.activity + ".";
+        console.log(speak);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

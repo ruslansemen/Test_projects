@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function () {
+            // Рисуем таблицу
+            var tab = document.createElement("table");
+            tab.className = "board";
+            for (var i = 0; i <= 6; i++) {
+                var tr = document.createElement("tr");
+                tr.className = "line_" + i;
+                for (var j = 0; j <= 4; j++) {
+                    var td = document.createElement("td");
+                    td.className = "cell_" + i + "_" + j;
+                    tr.appendChild(td);
+                }
+
+                tab.appendChild(tr);
+            }
+
+            document.body.appendChild(tab);
+
+            // раскрашиваем клетки таблицы
+            var cell = tab.getElementsByTagName("td");
+            for (var i = 0; i < cell.length; i++) {
+                var tdNum = cell[i].className.split("_");
+                console.log(tdNum[1] + ", " + tdNum[2]); // контроль содержимого
+                if ((parseInt(tdNum[1]) + parseInt(tdNum[2])) % 2 == 0) {
+                    cell[i].style.backgroundColor = "#ceab65";
+                } else {
+                    cell[i].style.backgroundColor = "white";
+                }
+            }
+            // массив с фигурами шахмат
+            var figures = [{
+                    name: "king",
+                    white_code: "&#9812",
+                    black_code: "&#9818"
+                },
+                {
+                    name: "queen",
+                    white_code: "&#9813",
+                    black_code: "&#9819"
+                }
+
+            ]
+            // расставляем шахматы по доске
+            var cell_0_0 = document.getElementsByClassName("cell_0_0")[0];
+            cell_0_0.innerHTML = figures[1].white_code;
+            var cell_0_1 = document.getElementsByClassName("cell_0_1")[0];
+            cell_0_1.innerHTML = figures[1].black_code;
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+
+</body>
+
+</html>

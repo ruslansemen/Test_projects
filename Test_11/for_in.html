@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>for_in_of</title>
+    <script>
+        var people = ["Tom", "Alice", "Bob", "Sam"];
+
+        var cars = ["Audi", "BMW", "Ford", "Mazda", "Lada"];
+
+        var chevy = {
+            make: 'Chevy',
+            model: 'Bel Air',
+            year: 1957,
+            color: 'red',
+            passengers: 2,
+            convertible: false,
+            mileage: 1021
+        };
+        /*for (var index in people) {
+            console.log(people[index] + " соответствует " + index);
+        }
+
+        for (var index in cars) {
+            console.log(cars[index] + " соответсвует " + index);
+        } */
+
+        /*
+        for (var val in cars) {
+            console.log(val);
+        }
+
+        for (var val of people) {
+            console.log(val);
+        } */
+
+        for (var i in chevy) {
+            console.log(i + " : " +
+                chevy[i]);
+        }
+
+
+        for (var key in chevy) {
+            // этот код будет вызван для каждого свойства объекта
+            // ..и выведет имя свойства и его значение
+
+            console.log(key + " значение: " + chevy[key]);
+        }
+
+
+
+
+
+
+        /*
+        var menu = {
+            width: 300,
+            height: 200,
+            title: "Menu"
+        };
+
+        for (var key in menu) {
+            // этот код будет вызван для каждого свойства объекта
+            // ..и выведет имя свойства и его значение
+
+            console.log("Ключ: " + key + " значение: " + menu[key]);
+        } */
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

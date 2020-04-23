@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    var a_min = parseInt(prompt('Введите минимальное число:'));
+    var a_max = parseInt(prompt('Введите максимальное число:'));
+    var a = getRandomInt(a_min, a_max);
+    var b = getRandomInt(-100, 0);
+    alert('a = ' + a + ', ' + 'b = ' + b);
+
+</script>

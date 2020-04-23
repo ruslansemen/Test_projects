@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bascet</title>
+    <script>
+        window.onload = init;
+
+        function init() {
+
+            var newElem = document.createElement("div");
+            newElem.innerHTML = "test text lorem";
+            newElem.id = "test_text";
+            var newLi = document.createElement("a");
+            newLi.innerHTML = "Ссылка куда - то";
+            newLi.id = "ref";
+            newLi.href = "https://yandex.ru";
+
+            var prnt = document.getElementById("paret");
+            prnt.appendChild(newElem);
+            prnt.appendChild(newLi);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="paret"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        /*
+        function Dog(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+        }
+
+        function Duck(type, canFly) {
+            this.type = type;
+            this.canFly = canFly;
+        }
+
+        var duck = new Duck("redheaded", true);
+        console.log(duck);
+
+
+        var fido = new Dog("Fido", "Mixed", 38);
+        var buffu = new Dog("Buffu", "Chao-Chao", 50);
+        var tuti = new Dog("Tuti", "Chiahuahua", 3);
+
+        var allDogs = [fido, buffu, tuti];
+        for (var i = 0; i < allDogs.length; i++) {
+
+            if (allDogs[i].weight <= 3) {
+                console.log(allDogs[i].name + " " + allDogs[i].breed + " " + allDogs[i].weight);
+                allDogs[i].weight += 10;
+                console.log("now " + allDogs[i].name + " weights " + allDogs[i].weight)
+            }
+
+        }
+        */
+
+        function Dog(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+        }
+
+        var fido = new Dog("Fido", "Mixed", 38);
+        var fluffy = new Dog("Fluffy", "Poodle", 30);
+        var spot = new Dog("Spot", "Chihuahua", 10);
+        var dogs = [fido, fluffy, spot];
+
+        for (var i = 0; i < dogs.length; i++) {
+            var size = "small";
+            if (dogs[i].weight > 10) {
+                size = "large";
+            }
+            console.log("Dog: " + dogs[i].name + " is a " + size + " " + dogs[i].breed);
+        }
+    </script>
+</head>
+
+<body></body>
+
+</html>

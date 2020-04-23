@@ -1,0 +1,52 @@
+header {
+    ul {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+main {
+    h1 {
+        color: chartreuse;
+        font-size: 46px;
+    }
+
+    p {
+        color: crimson;
+        font-size: 40px;
+
+        &:hover {
+            background-color: cadetblue;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        background-color: blueviolet;
+        width: 100%
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    .container {
+        width: 90%;
+        background-color: brown;
+    }
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    .container {
+        background-color: red;
+        width: 70%;
+    }
+}

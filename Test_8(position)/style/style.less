@@ -1,0 +1,52 @@
+// sourceMap: true
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+    }
+}
+
+.clear:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.main_block {
+    float: right;
+    width: 70%;
+}
+
+.sub_block {
+    float: left;
+    width: calc(30%-2%);
+}
+
+.square-color {
+    clear: both;
+    width: 60px;
+    height: 60px;
+    background-color: brown;
+    transform: rotate(45deg);
+    position: relative;
+    top: 20px;
+    left: 20px
+}
+
+footer {
+    clear: both;
+
+    &:before {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+}

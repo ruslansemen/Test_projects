@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CB</title>
+    <script>
+        /*
+        var async = function (a) {
+            function kol() {
+                const b = a + 2;
+                console.log(b);
+                return b;
+            }
+            setTimeout(kol, 1000);
+
+        }
+        console.log(async(5));
+        */
+
+        /*
+                var foo = function () {
+                    alert("Hello!");
+                };
+                setTimeout(foo, 3000);
+        */
+        //--------------------------------------------------
+
+
+        function cb(b) {
+            console.log(b);
+        }
+
+
+        const async = function (a, cb) {
+
+            function kol() {
+                const b = a + 1;
+                cb(b);
+            }
+            setTimeout(kol, 2000);
+        };
+
+        async (5, cb);
+        //----------------------------------------------------------------
+
+        const async = (a) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (a) {
+                        const b = a + 1;
+                        resolve(b);
+                    } else {
+                        reject('Error');
+                    }
+                }, 200);
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

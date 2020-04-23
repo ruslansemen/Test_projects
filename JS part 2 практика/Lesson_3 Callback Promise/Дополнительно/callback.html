@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+    <script>
+        // const async = (a, cb) => {
+        //     setTimeout(() => {
+        //         const b = a + 1;
+        //         console.log(b);
+        //         cb(b);
+        //     }, 500);
+        // }
+
+
+        // let f = (vr) => {
+        //     console.log(vr);
+        // };
+
+        // async (5, f);
+
+
+        // const async = (a) => {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             if (a) {
+        //                 const b = a + 1;
+        //                 resolve(b);
+        //             } else {
+        //                 reject('Error');
+        //             }
+        //         }, 200);
+        //     });
+        // }
+
+        // async (5).then((b) => {
+        //     console.log(b); // Сработает первый колбэк и выведет в консоль 6
+        // }, (error) => {
+        //     console.log(error)
+        // });
+
+
+
+
+        // async ().then((b) => {
+        //     console.log(b);
+        // }, (error) => {
+        //     console.log(error) // Сработает второй колбэк и выведет в консоль 'Error'
+        // });
+
+
+        //let a = false;
+
+        function promice(resolve, reject) {
+
+            setTimeout(function (a = false) {
+                if (a) {
+                    resolve(a);
+                } else {
+                    reject(a);
+                }
+            }, 200)
+        }
+
+
+        function res(v) {
+            console.log(v + " resolve");
+        }
+
+        function rej(v) {
+            console.log(v + " reject");
+        }
+
+        promice(res, rej);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

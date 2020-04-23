@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="f()">
+        <p>Кликните сюда <code>CLICK</code>, а сработает обработчик для DIV </p>
+    </div>
+
+    <div onclick="alert('Обработчик для Div сработал!')">
+        <p>Кликните сюда <code>CLICK</code>, а сработает обработчик для DIV </p>
+    </div>
+
+    <input id="b1" value="Нажми меня" onclick="alert('Спасибо!')" type="button">
+
+    <h1>Header1</h1>
+    <h1>Header2</h1>
+    <button onclick="fbtn()">OK</button>
+
+    <select name="список цветов" id="color" onchange="fbtn(this.value)">
+        <option value="blue">Синий</option>
+        <option value="green">Зелёный</option>
+        <option value="orange">Оранжевый</option>
+    </select>
+
+
+    <script>
+        function f() {
+            alert('Обработчик для Div сработал!');
+        }
+
+        function fbtn(x = "red") {
+            document.querySelectorAll("h1")[0].style.color = x;
+            //document.querySelectorAll("h1")[1].style.color = "blue";
+        }
+    </script>
+</body>
+
+</html>

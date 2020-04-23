@@ -1,0 +1,56 @@
+/*@import "compass/css3";*/
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border: solid black 1px;
+    height: 900px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.flex-item {
+    background-color: tomato;
+    padding: 5px;
+    width: 250px;
+    min-height: 150px;
+    margin-top: 10px;
+
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+.kl1,
+.kl2 {
+    background-color: blueviolet;
+    padding: 5px;
+    width: 250px;
+    min-height: 200px;
+    margin-top: 10px;
+
+    line-height: 90px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+
+.kl3 {
+    height: 120px;
+}
+
+.kl4,
+.kl5,
+.kl6 {
+    min-height: 150px;
+}

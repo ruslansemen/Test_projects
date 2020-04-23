@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaseRobot</title>
+    <script>
+        function Robot(name, year, owner) {
+            this.name = name;
+            this.year = year;
+            this.owner = owner;
+        }
+
+        Robot.prototype.maker = "ObectsRUs";
+        Robot.prototype.speak = function () {
+            alert("Warning warning!!");
+        };
+        Robot.prototype.makeCoffee = function () {
+            alert("I am " + this.name + " , I am making coffee");
+        };
+        Robot.prototype.blinkLights = function () {
+            alert("I'm " + this.name + "!" + " Blink oll my lights!");
+        };
+
+        function SpaseRobot(name, year, owner, homePlanet) {
+            this.name = name;
+            this.year = year;
+            this.owner = owner;
+            this.homePlanet = homePlanet;
+        }
+
+        SpaseRobot.prototype = new Robot();
+        SpaseRobot.prototype.speak = function () {
+            alert(this.name + " says Sir, If I may venture an opinion...");
+        };
+        SpaseRobot.prototype.pilot = function () {
+            alert(this.name + " says Thrustears? Are they important?");
+        };
+
+        var c3po = new SpaseRobot("C3PO", 1977, "Luke Skywalker", "Tatooine");
+        c3po.speak();
+        c3po.pilot();
+        console.log(c3po.name + " was made by " + c3po.maker);
+
+        var simon = new SpaseRobot("Simon", 2009, "Carla Diana", "Earth");
+        simon.makeCoffee();
+        simon.blinkLights();
+        simon.speak();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

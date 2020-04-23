@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var isMomHappy = true;
+        // Promise
+        var willIGetNewPhone = new Promise(
+            function (resolve, reject) {
+                if (isMomHappy) {
+                    var phone = {
+                        brand: "Samsung",
+                        color: "black"
+                    };
+                    resolve(phone);
+                } else {
+                    var reason = new Error("mom is non happy");
+                    reject(reason);
+                }
+            }
+        );
+
+        // call our promise
+        willIGetNewPhone
+            .then(function (fulfilled) {
+                //yay, you got a new phone
+                console.log(fulfilled);
+            })
+            .catch(function (error) {
+                // ops, mom don't buy it
+                console.log(error.message);
+                console.log(error);
+            });
+
+
+        // var askMom = function () {
+        //     willIGetNewPhone
+        //         .then(function (fulfilled) {
+        //             //yay, you got a new phone
+        //             console.log(fulfilled);
+        //         })
+        //         .catch(function (error) {
+        //             // ops, mom don't buy it
+        //             console.log(error.message);
+        //             console.log(error);
+        //         });
+        // };
+        // askMom();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

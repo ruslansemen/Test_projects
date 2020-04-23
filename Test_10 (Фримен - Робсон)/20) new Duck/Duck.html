@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Duck</title>
+    <script>
+        function Duck(sound) {
+            this.sound = sound;
+            this.quack = function() {
+                console.log(this.sound);
+            }
+        }
+
+        var toy = new Duck("quack quack");
+        toy.quack();
+
+        var animals = new Duck("Miu-miu");
+        animals.quack();
+        animals.wolk = true;
+        animals["wont to eat"] = false;
+
+        console.log(toy);
+        console.log(animals);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

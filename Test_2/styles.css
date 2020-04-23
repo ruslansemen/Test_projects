@@ -1,0 +1,47 @@
+.container {
+    padding: 1em;
+    background-color: #e7e6d4;
+    border: 3px dashed #645a4e;
+}
+
+.floatbox {
+    width: 300px;
+    min-height: 150px;
+    margin-right: 1em;
+    padding: 0 1em;
+    background-color: #fff;
+    border: 3px dashed #666666;
+}
+
+.bn4 {
+    float: left;
+
+}
+
+.bn2:after {
+    display: block;
+    content: ">>>";
+    height: 0;
+    background-color: blueviolet
+}
+
+.inside {
+    height: 1em;
+    background-color: burlywood;
+    margin-bottom: 6px;
+}
+
+.enbox {
+    clear: both;
+    height: 1em;
+    background-color: aliceblue;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 1em;
+    clear: both;
+    background-color: red;
+    /* visibility: hidden; */
+}

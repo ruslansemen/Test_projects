@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <script>
+        class DogRun {
+            constructor(name, breed) {
+                this.name = name;
+                this.breed = breed;
+            }
+            run() {
+                console.log(this.name + " mow run.");
+            }
+        }
+
+        class DogSit extends DogRun {
+            // constructor(food) {
+            //     this.food = food;
+            // }
+            sit() {
+                console.log(this.name + " now sits.");
+            }
+        }
+
+        class DogGetHand extends DogSit {
+            constructor(name, breed, owner, weight) {
+                super();
+                this.breed = breed;
+                this.name = name;
+                this.owner = owner;
+                this.weight = weight;
+            }
+
+            getHand() {
+                console.log(this.name + " get you hend.");
+            }
+        }
+
+        var jeck = new DogGetHand("Jack", "Spaniel", "Tom", 45);
+        console.log(jeck);
+        jeck.sit();
+        jeck.run();
+        jeck.getHand();
+        console.log(jeck.name);
+        console.log(jeck.breed);
+        console.log(jeck.owner);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

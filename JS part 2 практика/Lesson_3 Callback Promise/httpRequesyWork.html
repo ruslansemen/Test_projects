@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // выполнение учебного запроса к API GeekBrains
+      //   function makeGETRequest(url, callback) {
+      //     var xhr = new XMLHttpRequest();
+
+      //     xhr.onreadystatechange = function () {
+      //       if (xhr.readyState === 4) {
+      //         console.log(xhr.responseType);
+      //         console.log(xhr.response);
+      //         var resp = xhr.responseText;
+      //         console.log(resp);
+      //         callback(resp);
+      //       }
+      //     };
+
+      //     xhr.open("GET", url, true);
+      //     xhr.send();
+      //   }
+
+      //   const API_URL =
+      //     "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses";
+
+      //   makeGETRequest(`${API_URL}/catalogData.json`, (goods) => {
+      //     var items = JSON.parse(goods);
+      //     console.log(items);
+      //   });
+
+      // переделаем функцию makeGETRequest так, чтобы она использовала промисы
+
+      function makeGETRequest(url, callback) {
+        var promise = new Promise((resolve) => {
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              console.log(xhr.responseType);
+              console.log(xhr.response);
+              var resp = xhr.responseText;
+              console.log(resp);
+              resolve(resp);
+            }
+          };
+          xhr.open("GET", url, true);
+          xhr.send();
+        });
+        promise.then(callback);
+      }
+
+      const API_URL =
+        "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses";
+
+      makeGETRequest(`${API_URL}/catalogData.json`, (goods) => {
+        var items = JSON.parse(goods);
+        console.log(items);
+      });
+    </script>
+  </head>
+
+  <body></body>
+</html>

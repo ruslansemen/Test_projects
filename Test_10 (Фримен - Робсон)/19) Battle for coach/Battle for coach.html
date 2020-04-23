@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        /*var number = "123-4567";
+        var simbol;
+        for (var i = 0; i < number.length; i++) {
+            simbol = number.charAt(i);
+            console.log(simbol);
+            console.log(typeof(simbol));
+        } */
+
+        // Код Лари 00
+        function validate00(phoneNumber) {
+            if (phoneNumber.length !== 8) {
+                return false;
+            }
+            for (var i = 0; i < phoneNumber.length; i++) {
+                if (i === 3) {
+                    if (phoneNumber.charAt(i) !== "-") {
+                        return false;
+                    }
+                } else if (isNaN(phoneNumber.charAt(i))) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Код Лари 01
+
+        function validate01(phoneNumber) {
+            if (phoneNumber.length > 8 || phoneNumber.length < 7) {
+                return false;
+            }
+            for (var i = 0; i < phoneNumber.length; i++) {
+                if (i === 3) {
+                    if (phoneNumber.length === 8 && phoneNumber.charAt(i) !== "-") {
+                        return false;
+                    } else if (phoneNumber.length === 7 && isNaN(phoneNumber.charAt(i))) {
+                        return false;
+                    }
+                } else if (isNaN(phoneNumber.charAt(i))) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // ------------------------------------------------------------------------
+        // Код Брэда 10
+        function validate10(phoneNumber) {
+            if (phoneNumber.length !== 8) {
+                return false;
+            }
+
+            var first = phoneNumber.substring(0, 3);
+            var second = phoneNumber.substring(4);
+            if (phoneNumber.charAt(3) !== "-" || isNaN(first) || isNaN(second)) {
+                return false;
+            }
+            return true;
+        }
+
+        // Код Брэда 11
+        function validate11(phoneNumber) {
+            if (phoneNumber.length > 8 || phoneNumber.length < 7) {
+                return false;
+            }
+
+            var first = phoneNumber.substring(0, 3);
+            var second = phoneNumber.substring(phoneNumber.length - 4); // проверить что остаётся в строке
+            console.log("second: " + second);
+
+            if (isNaN(first) || isNaN(second)) {
+                return false;
+            }
+
+            if (phoneNumber.length === 8) {
+                return (phoneNumber.charAt(3) === "-");
+            }
+
+            return true;
+        }
+        // ________________________________________________________________________________________________________________
+
+        console.log(validate11("123-4567"));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

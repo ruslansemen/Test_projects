@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>getAttribute</title>
+    <style>
+        #any {
+            background-color: brown;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input id="input" type="text">
+    <div id="any" class="jastClass">lorem</div>
+
+
+    <script>
+        var first = document.querySelectorAll("#any");
+        //console.log(first[0].getAttribute('class'));
+        first[0].setAttribute('class', 'another');
+        console.log(first[0].getAttribute('class'));
+
+
+        //var first = document.getElementById("any");
+        //console.log(first);
+
+    </script>
+</body>
+
+</html>

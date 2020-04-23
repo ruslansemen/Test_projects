@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttons</title>
+
+</head>
+
+<body>
+    <button id="b1">Кнопка 1</button>
+    <button id="b2">Кнопка 2</button>
+    <button id="b3">Кнопка 3</button>
+    <button id="b4" onclick="f()">Кнопка 4</button>
+    <button id="b5" onclick="ff()" class="btn_5">Кнопка 5</button>
+    <input type="button" value="Кнопка 6" id="b6">
+    <input id="fire" type="text">
+
+
+
+    <script>
+        var b3 = document.getElementById("b3");
+        b3.onclick = func;
+
+        function func() {
+            console.log(this);
+        }
+
+
+
+        var a = document.getElementById("b5");
+        console.log(a.innerHTML);
+
+        function f() {
+            alert('Hello world!');
+        }
+
+        function ff() {
+            document.getElementById('b4').click();
+        }
+        var fire = document.getElementById("fire");
+        fire.onkeypress = keypr;
+
+        function keypr(event) {
+            console.log(event.keyCode);
+        }
+    </script>
+</body>
+
+</html>
