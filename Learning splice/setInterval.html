@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>setInterval</title>
     <script>
+      let r = true;
       let i = false;
       let message = () => {
         i = !i;
         console.log(i ? "tick" : "tack");
       };
       let tm = () => {
-        setInterval(message, 1000);
+        // для того, чтобы установился только один интервальный обработчик, введём дополнительн флажок в виде булевой переменной r.
+        if (r) {
+          setInterval(message, 2000);
+          r = !r;
+        }
       };
+      document.addEventListener("keydown", tm);
     </script>
   </head>
   <body></body>
