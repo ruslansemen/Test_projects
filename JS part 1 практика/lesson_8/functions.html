@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions</title>
+    <script>
+      "use strict";
+
+      var users = [
+        {
+          l: "admin",
+          p: "12345",
+        },
+        {
+          l: "test",
+          p: "12345",
+        },
+      ];
+
+      function User(login, pass) {
+        this.access = false;
+        this.login = login;
+        this.pass = pass;
+        this.show = function () {
+          alert("Логин: " + this.login + "\nПароль: " + this.pass);
+        };
+        this.check = function () {
+          for (var i = 0; i < users.length; i++) {
+            if (users[i].l == this.login && users[i].p == this.pass) {
+              this.access = true;
+            }
+          }
+          return this.access;
+        };
+      }
+
+      var user1 = new User("admin", "12345");
+      var user2 = new User("demo", "12345");
+      console.log(user1);
+      user1.show();
+      user2.show();
+      alert(user1.check());
+      alert(user2.check());
+    </script>
+  </head>
+  <body></body>
+</html>
