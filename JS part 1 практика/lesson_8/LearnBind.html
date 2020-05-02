@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>OK</button>
+    <script>
+      var button = document.getElementsByTagName("button")[0];
+
+      var users = {
+        data: [
+          {
+            name: "John Smit",
+          },
+          {
+            name: "Elen Simons",
+          },
+        ],
+        showFirst: function () {
+          // console.log(this);
+          console.log(this.data[0].name);
+        },
+      };
+
+      var cars = {
+        data: [{ name: "Mitsubishi Lanser" }, { name: "Chevrolet Impala" }],
+      };
+
+      cars.showFirst = users.showFirst.bind(users);
+      cars.showFirst();
+
+      // button.onclick = users.showFirst;
+      button.onclick = users.showFirst.bind(users);
+    </script>
+  </body>
+</html>

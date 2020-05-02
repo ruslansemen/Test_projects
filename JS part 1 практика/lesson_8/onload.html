@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onload</title>
+  </head>
+  <body>
+    <button id="x">OK</button>
+
+    <script>
+      //   window.onload = function () {
+      //     document.getElementById("x").onclick = /*func*/ function func() {
+      //       console.log(this);
+      //     };
+      //   };
+
+      console.log(this);
+
+      // в консоль выводится объект Window
+      // Window { postMessage: ƒ,
+      // blur: ƒ,
+      // focus: ƒ,
+      // close: ƒ,
+      // frames: Window, …}
+
+      function myFunction() {
+        console.log(this);
+      }
+
+      // Вызовем функцию
+      myFunction();
+
+      // функция выводит тот же объект Window!
+      // Window { postMessage: ƒ,
+      // blur: ƒ,
+      // focus: ƒ,
+      // close: ƒ,
+      // frames: Window, …}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>call</title>
+  </head>
+  <body>
+    <script>
+      //   function showFullName() {
+      //     alert(this.firstName + " " + this.lastName);
+      //   }
+
+      var user = {
+        firstName: "Василий",
+        lastName: "Петров",
+        showFullName: function () {
+          alert(this.firstName + " " + this.lastName);
+        },
+      };
+      var user1 = {
+        firstName: "Пётр1",
+        lastName: "Иванов1",
+      };
+      user1.show = user.showFullName;
+      user1.show();
+
+      // user.showFullName.call(user1);
+      // showFullName.call(user);
+    </script>
+  </body>
+</html>
