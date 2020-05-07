@@ -68,6 +68,10 @@ class GoodsList {
   }
 }
 
+// мои 2 строки:
+let searchButton = document.getElementsByClassName("search-button")[0];
+let searchInput = document.getElementsByClassName("goods-search")[0];
+
 searchButton.addEventListener("click", (e) => {
   const value = searchInput.value;
   list.filterGoods(value);
