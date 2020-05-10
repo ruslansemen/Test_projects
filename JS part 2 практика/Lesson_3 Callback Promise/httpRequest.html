@@ -49,6 +49,24 @@
       //   xhr.ontimeout = function () {};
 
       xhr.send(); // методом .send() мы отправляем сформированный выше запрос
+
+      // создадим запрос файла формата XML и выведем полученные данные в консоль
+      let xmlHr;
+      xmlHr = new XMLHttpRequest();
+      xmlHr.onreadystatechange = function () {
+        console.log(xmlHr.readyState);
+        console.log(xmlHr.status);
+        if (xmlHr.readyState === 4) {
+          console.log(xmlHr.responseText);
+          document.write(xmlHr.responseText);
+        }
+      };
+      xmlHr.open(
+        "GET",
+        "https://raw.githubusercontent.com/ruslansemen/Test_projects/master/JS%20part%202%20практика/Lesson_3%20Callback%20Promise/any.xml",
+        true
+      );
+      xmlHr.send();
     </script>
   </body>
 </html>
