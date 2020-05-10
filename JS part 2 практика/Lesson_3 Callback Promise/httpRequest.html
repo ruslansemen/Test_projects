@@ -16,23 +16,26 @@
       xhr.onreadystatechange = function () {
         // Работает как обработчик события изменения статуса запроса
         // Этот код выполнится после получения ответа
+        console.log(xhr.readyState);
+        console.log(xhr.status);
         if (xhr.readyState === 4) {
           // этот код выполнится после выполнения запроса
-          console.log(xhr.responseXML);
+          //console.log(xhr.responseXML);
           console.log(xhr.responseText);
           console.log(JSON.parse(xhr.responseText));
         }
       };
 
+      // обращаюсь к папке json на своём репозитории github. На сайте копирую ссылку, открыф json-файл с вкладкой row в правом верхнем углу - имитирую обращение к серверу
       xhr.open(
         "GET",
-        "https://github.com/ruslansemen/Test_projects/blob/master/JS%20part%202%20практика/Lesson_3%20Callback%20Promise/catalog.json",
+        "https://raw.githubusercontent.com/ruslansemen/Test_projects/master/catalog.json",
         true
       );
 
       //   xhr.open(
       //     "GET",
-      //     "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json",
+      // "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json",
       //     true
       //   );
       // определяем, куда отправляем запрос и тип запроса
