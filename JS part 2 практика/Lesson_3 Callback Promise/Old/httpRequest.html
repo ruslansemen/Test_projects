@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // изучение объекта XMLHttpRequest
+
+        var xhr = new XMLHttpRequest(); // создаём объект запроса к серверу и присваиваем его переменной xhr
+
+        xhr.onreadystatechange = function () {
+            // какой-то код, который выполнится при получении ответа от сервера
+            // событие onreadystatechange наступает каждый раз, кода меняется значение в свойстве xhr.readyState 
+        };
+
+        xhr.open("GET", "http://example.com", true); // инициализация объекта запроса - задаём параметры запроса
+
+        xhr.timeout = 15000; // устанавливаем время, в течении которого ждём ответа
+
+        xhr.timeout = function () {}; // назначаем функцию, которая выполнится если время ожидания превышено
+
+        xhr.send(); // метод для отправки запроса
+
+        // xhr.readyState - свойство объекта, в котором хранится статус запроса. 4 - запрос выполнен.
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                // выполнить код после завершения запроса
+            }
+        };
+
+        // xhr.status - свойсво для хранения статуса запроса. 200 - запрос выполнен успешно.
+
+        xhr.responseText; // получить ответ сервера в виде текстовой строки
+        xhr.responseXML; // получить ответ сервера в виде XMLDocument
+
+        JSON.parse(); //  переводит JSON в объект
+        JSON.stringify(); // переводит объект в JSON
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
