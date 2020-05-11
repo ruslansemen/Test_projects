@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      // промис с ассинхроном в исходной функции и ассинхроном во 2-м then
+      const giveMeNumber = (number) => {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(number);
+          }, 200);
+        });
+      };
+
+      giveMeNumber(5)
+        .then((number) => {
+          return number + 1;
+        })
+        .then((number) => {
+          console.log("второй then");
+          console.log(number);
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              resolve(number);
+            }, 2000);
+          });
+        })
+        .then((number) => {
+          number += 10;
+          console.log("третий then");
+          console.log(number);
+        });
+    </script>
+  </body>
+</html>
