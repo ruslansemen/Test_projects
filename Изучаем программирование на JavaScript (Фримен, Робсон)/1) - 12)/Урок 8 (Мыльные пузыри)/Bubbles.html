@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44];
+
+
+        // первая функция
+
+        function printScoresAndGetBestSolution(scores) {
+            var highScore = 0;
+            var output;
+            for (var i = 0; i < scores.length; i++) {
+                output = 'Bubble solution #' + i + ' score: ' + scores[i];
+                console.log(output);
+                if (highScore < scores[i]) {
+                    highScore = scores[i];
+                }
+            }
+            return highScore;
+        }
+
+        // вторая фнкция
+
+        function getBestsSolutions(scores, highScore) {
+            var bestSolutions = [];
+            for (i = 0; i < scores.length; i++) {
+                if (scores[i] == highScore) {
+                    bestSolutions.push(i);
+                }
+            }
+            return bestSolutions;
+        }
+
+        // действия
+
+        var highScore = printScoresAndGetBestSolution(scores);
+        var bestSolutions = getBestsSolutions(scores, highScore);
+        console.log('Bubbles tests: ' + scores.length);
+        console.log(' Highest bubble score: ' + highScore);
+        console.log('Solutions with highest score: ' + bestSolutions);
+
+        // найдём образец с наименьшей стоимостью
+        var costs = [.25, .27, .25, .25, .25, .25, .33, .31, .25, .29, .27, .22, .31, .25, .25, .33, .21, .25, .25, .25, .28, .25, .24, .22, .20, .25, .30, .25, .24, .25, .25, .25, .27, .25, .26, .29];
+        // выведем на экран массив стоимостей
+        /*for (i = 0; i < costs.length; i++) {
+            console.log('#' + i + ': ' + costs[i]);
+        } */
+
+        var smolestCost = costs[bestSolutions[0]] + 1;
+        var index;
+
+        for (i = 0; i < bestSolutions.length; i++) {
+            if (smolestCost > costs[bestSolutions[i]]) {
+                smolestCost = costs[bestSolutions[i]];
+                index = bestSolutions[i];
+            }
+        }
+        console.log('smolest cost: ' + smolestCost + ' has example number: ' + index + ', which can blows bubbles: ' + highScore);
+
+    </script>
+</body>
+
+</html>
