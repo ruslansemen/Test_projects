@@ -1,10 +1,11 @@
-const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+const API_URL =
+  "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses";
 const app = new Vue({
   el: "#app",
   data: {
     goods: [],
     filteredGoods: [],
-    searchLine: ''
+    searchLine: "",
   },
   methods: {
     makeGETRequest(url, callback) {
@@ -18,8 +19,8 @@ const app = new Vue({
         if (xhr.readyState === 4) {
           callback(xhr.responseText);
         }
-      }
-      xhr.open('GET', url, true);
+      };
+      xhr.open("GET", url, true);
       xhr.send();
     },
 
@@ -29,7 +30,7 @@ const app = new Vue({
         this.filteredGoods = goods;
       });
     },
-  }
+  },
 });
 
 // const API_URL =

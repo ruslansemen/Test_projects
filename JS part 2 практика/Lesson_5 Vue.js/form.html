@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      <label for="n1">How old are you?</label>
+      <input type="text" value="20 for ever" />
+    </form>
+    <div id="app">
+      <h1>{{hello}}</h1>
+    </div>
+    <p>lorem</p>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          hello: "Hello Vue!",
+        },
+      });
+    </script>
+  </body>
+</html>
