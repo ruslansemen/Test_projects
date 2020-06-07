@@ -7,7 +7,7 @@ let options = {
   height: 200,
 };
 
-let { height: h, title, width: w } = options;
+let { height: h = 50, title, width: w } = options;
 console.log(title);
 console.log(w);
 console.log(h);

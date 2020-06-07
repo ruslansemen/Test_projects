@@ -5,15 +5,22 @@ const messages = [
   { name: "Ivan", content: "Hello friend!" },
   { name: "Oleg", content: "Hi!" },
   { name: "Ivan", content: "How are you?" },
+  { name: "Oleg", content: "I'm fine." },
 ];
 
-const Message = (props) => (
+const Message = ({ name, content }) => (
   <li>
-    <strong>{props.name}</strong>: {props.content}
+    <strong>{name}</strong>: {content}
   </li>
 );
 
-const MessageList = ({ messages }) => null;
+const MessageList = ({ messages }) => (
+  <ul>
+    {messages.map((item, index) => (
+      <Message {...item} key={index} />
+    ))}
+  </ul>
+);
 
 const mountPoint = document.getElementById("root");
-ReactDOM.render(<Message name="Ivan" content="Hello!" />, mountPoint);
+ReactDOM.render(<MessageList messages={messages} />, mountPoint);
