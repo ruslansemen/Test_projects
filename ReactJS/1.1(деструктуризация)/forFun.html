@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person() {
+        this.age = 0;
+
+        setInterval(function growUp() {
+          this.age++;
+          console.log(this.age);
+          console.log(this);
+        }, 1000);
+      }
+      var p = new Person();
+
+      function Person1() {
+        this.age = 0;
+
+        setInterval(() => {
+          this.age++;
+          //console.log(this.age);
+        }, 1000);
+      }
+
+      var p1 = new Person1();
+
+      // __________________________________________
+      // var objReg = {
+      //   hello: function () {
+      //     return this;
+      //   },
+      // };
+
+      // var objArrow = {
+      //   hello: {
+      //     say: () => this,
+      //   },
+      // };
+
+      // console.log(objReg.hello()); // возвращает, как и ожидается, объект objReg
+      // console.log(objArrow.hello.say()); // возвращает объект Window!
+      // ++++++++++++++++++++++++++++++++++++++++++++++
+      //   "use strict";
+      // var obj = {
+      //   name: "Ruslan",
+      //   status: "user",
+      //   activity: "fullStackDeveloper",
+      //   inObj: {
+      //     sayHi: function () {
+      //       console.log(this.name + ": метод inObj");
+      //       let sayHello = () => {
+      //         console.log(this.name + ": стрелочная функция");
+      //         console.log(this);
+      //       };
+      //       let sayHello2 = function () {
+      //         console.log(this.name + "обычная функция");
+      //         console.log(this);
+      //       };
+      //       sayHello();
+      //       sayHello2();
+      //     },
+      //     name: "user2",
+      //     adge: 30,
+      //   },
+      // };
+
+      // obj.inObj.sayHi();
+    </script>
+  </body>
+</html>

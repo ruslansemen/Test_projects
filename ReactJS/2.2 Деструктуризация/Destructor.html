@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructor</title>
+  </head>
+  <body>
+    <script>
+      // function f(...args) {
+      //   console.log(args);
+      // }
+      // f(1, 2, 3);
+      let arr1 = [1, 2, 3, 4, { name: "Ruslan", age: 34 }];
+      let arr2 = [...arr1];
+      arr2[4] = { ...arr1[4] };
+      arr2[4].age = 25;
+      console.log(...arr1);
+      console.log(arr2);
+
+      let user = {
+        name: "Ruslan",
+        surname: "Semen",
+        age: 34,
+      };
+
+      // let user2 = { ...user };
+      // user2.age = 25;
+
+      // console.log(user);
+      // console.log(user2);
+
+      // function destruct({ name, surname, age }) {
+      //   console.log(name);
+      //   console.log(surname);
+      //   console.log(age);
+      // }
+
+      // destruct(user);
+    </script>
+  </body>
+</html>
