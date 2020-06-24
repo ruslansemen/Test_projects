@@ -1,13 +1,10 @@
 import React from "react";
+import { TextField, FloatingActionButton } from "material-ui";
+import SendIcon from "material-ui/svg-icons/content/send";
 import Message from "./Message";
 import "../styles/styles.css";
 
 export default class MessageField extends React.Component {
-  constructor(props) {
-    super(props);
-    this.textInput = React.createRef();
-  }
-
   state = {
     messages: [
       { text: "Привет!", sender: "bot" },
@@ -16,12 +13,11 @@ export default class MessageField extends React.Component {
     input: "",
   };
 
-  componentDidMount() {
-    this.textInput.current.focus();
-  }
-
-  componentDidUpdate() {
-    if (this.state.messages[this.state.messages.length - 1].sender === "me") {
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      prevState.messages.length < this.state.messages.length &&
+      this.state.messages[this.state.messages.length - 1].sender === "me"
+    ) {
       setTimeout(() => {
         this.setState({
           messages: [
@@ -62,17 +58,23 @@ export default class MessageField extends React.Component {
     return (
       <div className="layoyt">
         <div className="message-field"> {MessageElements} </div>
-        <input
-          ref={this.textInput}
-          name="input"
-          style={{ fontSize: "22px" }}
-          onChange={this.handleChange}
-          onKeyUp={(event) => this.handleKeyUp(event, this.state.input)}
-          value={this.state.input}
-        />
-        <button onClick={() => this.handleClick(this.state.input)}>
-          Отправить сообщение
-        </button>
+
+        <div style={{ width: "100%", display: "flex" }}>
+          <TextField
+            name="input"
+            fullWidth={true}
+            hintText="Введите сообщение"
+            style={{ fontSize: "22px" }}
+            onChange={this.handleChange}
+            value={this.state.input}
+            onKeyUp={(event) => this.handleKeyUp(event, this.state.input)}
+          />
+          <FloatingActionButton
+            onClick={() => this.handleClick(this.state.input)}
+          >
+            <SendIcon />
+          </FloatingActionButton>
+        </div>
       </div>
     );
   }
