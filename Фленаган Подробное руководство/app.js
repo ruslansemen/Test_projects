@@ -80,3 +80,13 @@ count *= 3; // => 6 эквивалентно const = const*3
 count; // => 6
 
 //  операторы сравнения
+var x = 2,
+  y = 3;
+x == y; // false
+x != y; // true
+x < y; // true
+x <= y; // true
+x > y; // false
+"two" == "three"; // false
+"two" > "three"; // true
+false == x > y; // true
