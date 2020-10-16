@@ -90,3 +90,19 @@ x > y; // false
 "two" == "three"; // false
 "two" > "three"; // true
 false == x > y; // true
+
+// функции
+
+function plus1(x) {
+  return x + 1;
+}
+
+plus1(y);
+
+var square = function (x) {
+  return x * x;
+};
+
+square(plus1(y));
+
+// функции, присвоенные свойствам объектов, называются методами (стр. 28)

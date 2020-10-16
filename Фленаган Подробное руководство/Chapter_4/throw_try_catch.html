@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Введите число от 5 до 10:</p>
+
+    <input id="demo" type="text" />
+    <button type="button" onclick="myFunction()">Проверка ввода</button>
+    <p id="p01"></p>
+
+    <script>
+      function myFunction() {
+        var message, x;
+        message = document.getElementById("p01");
+        message.innerHTML = "";
+        x = document.getElementById("demo").value;
+        try {
+          console.log("check");
+          throw "пусто";
+          //   if (x == "")  throw "пусто";
+          //   if (isNaN(x))  throw "не число";
+          //   x = Number(x);
+          //   if (x < 5)  throw "слишком мало";
+          //   if (x > 10)  throw "слишком много";
+        } catch (err) {
+          message.innerHTML = "Вы ввели " + err;
+        }
+      }
+    </script>
+  </body>
+</html>
