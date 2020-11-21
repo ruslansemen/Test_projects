@@ -1,0 +1,37 @@
+/* @font-face {
+  font-family: "Emblema One";
+  src: url("./fonts/EmblemaOne/EmblemaOne-Regular.woff"),
+    url("./fonts/EmblemaOne/EmblemaOne-Regular.ttf");
+} */
+
+@font-face {
+  font-family: "Gagalin";
+  src: url("./fonts/Gagalin/Gagalin-Regular.otf");
+}
+
+body {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  font-size: small;
+}
+
+h1,
+h2 {
+  color: #cc6600;
+  /* text-decoration: underline; */
+  border-bottom: thin dotted #888888;
+}
+
+h1 {
+  font-family: "Gagalin", sans-serif;
+  /* font-family: "Emblema One"; */
+  font-size: 220%;
+}
+
+h2 {
+  font-size: 130%;
+  font-weight: normal;
+}
+
+blockquote {
+  font-style: italic;
+}
