@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+    </style>
+    <script>
+      window.onload = init;
+      function init() {
+        let map = document.getElementsByTagName("img")[0];
+        map.onmousemove = hendleMouse;
+      }
+      function hendleMouse(eventObg) {
+        let x = eventObg.clientX;
+        let y = eventObg.clientY;
+
+        let inform = document.getElementById("inform");
+        inform.innerHTML = `coordinates X = ${x}, <br/> coordinates Y = ${y}`;
+      }
+    </script>
+  </head>
+  <body>
+    <img src="map.jpg" alt="#" />
+    <p id="inform"></p>
+  </body>
+</html>

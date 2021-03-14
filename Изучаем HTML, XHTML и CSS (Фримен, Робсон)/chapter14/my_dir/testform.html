@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Принять участие в конкурсе</title>
+  </head>
+  <body>
+    <form action="http://wickedlysmart.com/hfhtmlcss/contest.php" method="POST">
+      <p>
+        Просто введите своё имя (и нажмите кнопку Отправить), чтобы принять
+        участие в конкурсе: <br />
+        Имя: <input type="text" name="firstname" value="" /> <br />
+        Фамилия: <input type="text" name="lastname" value="" /> <br />
+        <input type="submit" />
+      </p>
+    </form>
+
+    <form action="#" method="POST">
+      <p>Полное имя: <input type="text" name="fullname" /> <br /></p>
+
+      <p>
+        Выберите один из вариантов: <br />
+        <input type="radio" name="hotornot" value="горячо" /> горячо <br />
+        <input type="radio" name="hotornot" value="холодно" /> холодно <br />
+        <input type="radio" name="hotornot" value="нормально" /> нормально
+        <br />
+      </p>
+
+      <p>
+        Элементы checkbox <br />
+        соль: <input type="checkbox" name="spice" value="соль" /> <br />
+        перц: <input type="checkbox" name="spice" value="перец" /> <br />
+        чеснок: <input type="checkbox" name="spice" value="чеснок" /> <br />
+      </p>
+
+      <p>
+        Элемент textarea <br />
+        <textarea name="comments" rows="5" cols="16"></textarea>
+      </p>
+
+      <p>
+        Элемент select <br />
+        <select name="characters">
+          <option value="Баккару">Баккару Банзай</option>
+          <option value="Томми">Чудесный Томми</option>
+          <option value="Пенни">Пенни Придди</option>
+          <option value="Джерси">Нью-Джерси</option>
+          <option value="Джон">Джон Паркер</option>
+        </select>
+      </p>
+      <p>
+        элемент input type number <br />
+        <input type="number" min="10" max="20" />
+      </p>
+
+      <p>
+        Элемент input type range <br />
+        <input type="range" min="8" max="20" step="2" />
+      </p>
+
+      <p>
+        элемент input type color <br />
+
+        <input type="color" />
+      </p>
+
+      <p>
+        элемент input type date <br />
+        <input type="date" />
+      </p>
+
+      <p>Кнопка отправить: <input type="submit" value="отправить заппрос" /></p>
+    </form>
+  </body>
+</html>

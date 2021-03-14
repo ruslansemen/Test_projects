@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let moneu = String(
+        prompt("какую сумму хотите внести на банковский счёт?")
+      );
+      let lastSimbol = String(moneu.charAt(moneu.length - 1));
+      let word = "";
+
+      switch (lastSimbol) {
+        case "1":
+          word = "рубль";
+          break;
+        case "2":
+          word = "рубля";
+          break;
+        case "3":
+          word = "рубля";
+          break;
+        case "4":
+          word = "рубля";
+          break;
+        default:
+          word = "рублей";
+          break;
+      }
+
+      alert("Вы внесли " + moneu + " " + word);
+    </script>
+  </body>
+</html>

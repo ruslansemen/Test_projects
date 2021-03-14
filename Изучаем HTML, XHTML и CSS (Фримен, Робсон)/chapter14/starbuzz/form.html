@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Starbuzz Bean Machine</title>
+    <link rel="stylesheet" href="./form.css" />
+  </head>
+
+  <body>
+    <h1>Starbuzz Bean Machine</h1>
+    <h2>
+      Заполните следующую форму и нажмите кнопку &laquo;Заказать сейчас&raquo;,
+      чтобы оформить заказ
+    </h2>
+    <form action="http://starbuzzcoffe.com/processorder.php" method="POST">
+      <div class="row">
+        <p class="cell left">Выберите кофе:</p>
+        <div class="cell right">
+          <select name="beans">
+            <option value="Смесь">Домашняя смесь</option>
+            <option value="Боливия">Боливия</option>
+            <option value="Гватемала">Гватемала</option>
+            <option value="Кения">Кения</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Тип:</p>
+        <p class="cell right">
+          <input type="radio" name="beantype" value="зёрна" checked /> Кофе в
+          зёрнах
+          <br />
+          <input type="radio" name="beantype" value="молотый" /> Молотый кофе
+          <br />
+        </p>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Количество пакетиков:</p>
+        <div class="cell right">
+          <input type="number" name="bags" min="1" max="10" />
+        </div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Доставить к указанной дате:</p>
+        <div class="cell right">
+          <input type="date" name="date" />
+        </div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Дополнительные услуги:</p>
+        <div class="cell right">
+          <input type="checkbox" name="extras[]" value="Подарочная упаковка" />
+          Подарочная упаковка
+          <br />
+          <input type="checkbox" name="extras[]" value="каталог" checked />
+          Доставка каталога вместе с заказом
+          <br />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell left">Доставить по адресу:</div>
+        <div class="cell right"></div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Имя:</p>
+        <div class="cell right"><input type="text" name="name" /></div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Адрес:</p>
+        <div class="cell right"><input type="text" name="addres" /></div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Город:</p>
+        <div class="cell right"><input type="text" name="city" /></div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Страна:</p>
+        <div class="cell right"><input type="text" name="state" /></div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Почтовый индекс:</p>
+        <div class="cell right"><input type="text" name="zip" /></div>
+      </div>
+
+      <div class="row">
+        <p class="cell left">Телефон:</p>
+        <div class="cell right"><input type="tel" name="phone" /></div>
+        <br />
+      </div>
+
+      <div class="row">
+        <p class="cell left">Комментарии клиентов:</p>
+        <div class="cell right">
+          <textarea name="comments" rows="10" cols="48"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell left"></div>
+        <div class="cell right">
+          <input type="submit" value="Заказать сейчас" class="cell" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

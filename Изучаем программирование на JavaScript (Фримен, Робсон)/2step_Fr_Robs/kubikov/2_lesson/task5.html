@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arg1 = +prompt("введите первое число");
+      let arg2 = +prompt("");
+      let operation = prompt(
+        "выберите операцию (plus, minus, divide, multiply)"
+      );
+
+      function mathOperation(arg1, arg2, operation) {
+        let ans;
+        switch (operation) {
+          case "plus":
+            ans = arg1 + arg2;
+            break;
+          case "minus":
+            ans = arg1 - arg2;
+            break;
+          case "divide":
+            ans = arg1 / arg2;
+            break;
+          case "multiply":
+            ans = arg1 * arg2;
+            break;
+        }
+        return ans;
+      }
+      alert(mathOperation(arg1, arg2, operation));
+    </script>
+  </body>
+</html>
